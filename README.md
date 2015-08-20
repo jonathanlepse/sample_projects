@@ -1,4 +1,4 @@
-These projects were created for fun or to practice a new conccept.
+These projects were created for fun or to practice a new concept.
 
 Feel free to edit, critique, improve, whatever.
 
