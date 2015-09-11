@@ -2,19 +2,24 @@ towns=[["wilton", "julett", "fernville", "dayton", "clousters"], "morstow", ["di
 transfer_town=["morstow"]
 towns.flatten!
 
-puts "All Aboard! This is the local train to montegadabo with stops at:"
-towns.cycle(1) {|x| puts x} 
-transfer_town.cycle(1) { |x| puts "Transfer at #{x} for B Line"}
+towns.each_wtih_index {|e,i| puts "All aboard this is the train to :#{e.last} with stops at: #{e[i + 1]} "}
+#puts "All Aboard! This is the local train to montegadabo with stops at:"
+#towns.cycle(1) {|x| puts x} 
+#transfer_town.cycle(1) { |x| puts "Transfer at #{x} for B Line"}
 puts "Once again those stops are:"
 towns.cycle(1) {|x| puts x}
-transfer_town.cycle(1) { |x| puts "Transfer at #{x} for B Line"}
+#transfer_town.cycle(1) { |x| puts "Transfer at #{x} for B Line"}
 
 puts "Please pick up all trash behind you before exiting the train"
 puts "For your saftey, please remain seated while the train is in motion"
 puts "Watch for closing doors"
 
 
-  towns.each do |x| 
+  towns.each_with_index do |e,i|
+    puts "This is the stop for #{e}, Next Stop #{e[i + 1]}"
+  end
+    
+=begin  
   if x=="wilton"
     puts "This is the stop for Wilton, Next stop Julett."
   end
@@ -45,6 +50,6 @@ puts "Watch for closing doors"
   if x== "montegadabo"
     puts "This is the final destination. Welcome to montegadabo and thank you for riding with us"
   end
-end
+  
+=end
 
-#this program works except it needs to be improved to be more useful.
